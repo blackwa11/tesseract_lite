@@ -6,18 +6,13 @@ Lightweight Blender addon for real-time 4D tesseract projection and rotation.
 
 ## ⬇️ Download
 
-Use files from Releases:
+👉 https://github.com/blackwa11/tesseract_lite/releases/download/v1.0/tesseract_lite.py
 
-👉 https://github.com/blackwa11/tesseract_lite/releases/tag/v1.0
-
-Download one of these:
-- `tesseract_lite.py`
-- `tesseract_lite.zip`
-
-⚠️ Do NOT use:
+⚠️ Use the link above  
+Do NOT use:
 - GitHub "Download ZIP"
-- `Source code (zip)`
-- `Source code (tar.gz)`
+- Source code (zip)
+- Source code (tar.gz)
 
 ---
 
@@ -25,11 +20,9 @@ Download one of these:
 
 1. Open Blender  
 2. Go to: Edit → Preferences → Add-ons  
-3. Click "Install"  
-4. Select:
-   - `tesseract_lite.py` **or**
-   - `tesseract_lite.zip`  
-5. Enable addon  
+3. Click **Install**  
+4. Select `tesseract_lite.py`  
+5. Enable the addon  
 
 ---
 
