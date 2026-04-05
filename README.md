@@ -2,6 +2,26 @@
 
 ## Download
 
+Use one of these release files:
+- `tesseract_lite.py`
+- `tesseract_lite.zip`
+
+⚠️ Do not use:
+- GitHub "Download ZIP"
+- `Source code (zip)`
+- `Source code (tar.gz)`
+
+## Blender Installation
+
+Blender → Edit → Preferences → Add-ons → Install
+
+Then select:
+- `tesseract_lite.py` or
+- `tesseract_lite.zip`
+# tesseract_lite
+
+## Download
+
 👉 https://github.com/blackwa11/tesseract_lite/releases/download/v1.0/tesseract_lite.py
 
 Install in Blender:
