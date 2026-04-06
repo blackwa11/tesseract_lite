@@ -14,13 +14,7 @@ class UNIVERSAL_OT_create_tesseract(Operator):
 
     def execute(self, context):
         try:
-            settings = context.scene.universal_4d_settings
-            _, data_type = create_tesseract_object(
-                context=context,
-                size=self.size,
-                object_type=settings.object_type,
-                w_depth=settings.w_depth,
-            )
+            _, data_type = create_tesseract_object(context, self.size)
             self.report({'INFO'}, f"Tesseract {data_type.lower()} created")
             return {'FINISHED'}
         except Exception as exc:

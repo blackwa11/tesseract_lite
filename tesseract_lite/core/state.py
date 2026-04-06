@@ -1,10 +1,10 @@
 object_4d_data = {}
 
 
-def remove_missing_objects(objects_getter):
-    stale = [name for name in object_4d_data if objects_getter(name) is None]
-    for name in stale:
-        object_4d_data.pop(name, None)
+def clear_missing_objects(get_object):
+    for obj_name in list(object_4d_data.keys()):
+        if get_object(obj_name) is None:
+            object_4d_data.pop(obj_name, None)
 
 
 def clear_state():

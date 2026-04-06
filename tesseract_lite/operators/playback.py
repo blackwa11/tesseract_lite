@@ -1,7 +1,9 @@
+import bpy
 from bpy.types import Operator
 
 from ..core.state import object_4d_data
-from ..services.animation import ensure_timer_running, reset_all_objects
+from ..services.animation import ensure_timer_running
+from ..services.transformers import reset_object_to_original
 
 
 class UNIVERSAL_OT_start_all(Operator):
@@ -14,7 +16,7 @@ class UNIVERSAL_OT_start_all(Operator):
             self.report({'WARNING'}, "No tesseract created")
             return {'CANCELLED'}
 
-        for data in object_4d_data.values():
+        for _, data in object_4d_data.items():
             data["animation_running"] = True
 
         ensure_timer_running()
@@ -32,7 +34,7 @@ class UNIVERSAL_OT_stop_all(Operator):
             self.report({'WARNING'}, "No active object")
             return {'CANCELLED'}
 
-        for data in object_4d_data.values():
+        for _, data in object_4d_data.items():
             data["animation_running"] = False
 
         self.report({'INFO'}, "Animation stopped")
@@ -46,7 +48,19 @@ class UNIVERSAL_OT_reset_all(Operator):
 
     def execute(self, context):
         settings = context.scene.universal_4d_settings
-        reset_all_objects(settings.w_depth)
+
+        for _, data in object_4d_data.items():
+            data["animation_running"] = False
+
+        for obj_name in list(object_4d_data.keys()):
+            obj = bpy.data.objects.get(obj_name)
+            if obj is not None:
+                try:
+                    reset_object_to_original(obj, object_4d_data[obj_name], settings.w_depth)
+                except Exception as exc:
+                    print(f"Error resetting {obj.name}: {exc}")
+            else:
+                object_4d_data.pop(obj_name, None)
 
         settings.speed = 1.0
         settings.scale = 1.0

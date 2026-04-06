@@ -1,8 +1,8 @@
 bl_info = {
     "name": "tesseract_lite",
     "author": "blackwa11 / Blackwall",
-    "version": (1, 1, 1),
-    "blender": (4, 0, 0),
+    "version": (1, 0, 0),
+    "blender": (3, 0, 0),
     "location": "View3D > Sidebar > 4D Transform",
     "description": "Lite Blender addon for real-time tesseract projection and 4D rotation",
     "category": "Object",
@@ -13,16 +13,12 @@ from bpy.props import PointerProperty
 
 from .properties import UNIVERSAL_PG_4d_settings
 from .operators.create import UNIVERSAL_OT_create_tesseract
-from .operators.playback import (
-    UNIVERSAL_OT_reset_all,
-    UNIVERSAL_OT_start_all,
-    UNIVERSAL_OT_stop_all,
-)
-from .services.animation import animation_update
+from .operators.playback import UNIVERSAL_OT_reset_all, UNIVERSAL_OT_start_all, UNIVERSAL_OT_stop_all
 from .ui.panel import UNIVERSAL_PT_4d_panel
+from .services.animation import animation_update
 from .core.state import clear_state
 
-CLASSES = (
+classes = (
     UNIVERSAL_PG_4d_settings,
     UNIVERSAL_OT_create_tesseract,
     UNIVERSAL_OT_start_all,
@@ -33,7 +29,7 @@ CLASSES = (
 
 
 def register():
-    for cls in CLASSES:
+    for cls in classes:
         bpy.utils.register_class(cls)
     bpy.types.Scene.universal_4d_settings = PointerProperty(type=UNIVERSAL_PG_4d_settings)
 
@@ -45,13 +41,16 @@ def unregister():
         except Exception:
             pass
 
-    for cls in reversed(CLASSES):
-        bpy.utils.unregister_class(cls)
-
     try:
         del bpy.types.Scene.universal_4d_settings
     except Exception:
         pass
+
+    for cls in reversed(classes):
+        try:
+            bpy.utils.unregister_class(cls)
+        except Exception:
+            pass
 
     clear_state()
 

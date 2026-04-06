@@ -9,7 +9,7 @@ class UNIVERSAL_PG_4d_settings(PropertyGroup):
             ('MESH', "Mesh", "Create tesseract as mesh"),
             ('CURVE', "Curve", "Create tesseract as curve"),
         ],
-        default='MESH',
+        default='MESH'
     )
 
     speed: FloatProperty(name="Speed", default=1.0, min=0.0, max=5.0)

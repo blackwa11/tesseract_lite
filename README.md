@@ -1,21 +1,15 @@
 # tesseract_lite
 
-Modular Blender addon source prepared for GitHub.
+Modular Blender add-on for real-time tesseract projection and 4D rotation.
 
-## Repository structure
+## Install in Blender
+1. Open Blender.
+2. Go to **Edit → Preferences → Add-ons → Install**.
+3. Select the addon ZIP release asset.
+4. Enable **tesseract_lite**.
 
-- `tesseract_lite/` — Blender addon package
+## Structure
 - `tesseract_lite/core/` — geometry, transforms, runtime state
-- `tesseract_lite/services/` — animation, materials, object creation
+- `tesseract_lite/services/` — animation, object creation, materials
 - `tesseract_lite/operators/` — Blender operators
 - `tesseract_lite/ui/` — sidebar panel
-
-## Blender installation
-
-1. Download the release ZIP.
-2. In Blender open **Edit → Preferences → Add-ons → Install...**
-3. Select the addon ZIP and enable **tesseract_lite**.
-
-## Notes
-
-This modular version preserves the original Lite functionality while using a cleaner structure for GitHub and future expansion.

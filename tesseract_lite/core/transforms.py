@@ -13,7 +13,7 @@ def rot4(v, a, b, angle):
 
 
 def proj4to3(p, w_depth=4.0):
-    denom = w_depth - p[3]
+    denom = (w_depth - p[3])
     if abs(denom) < 1e-9:
         denom = 1e-9
     k = w_depth / denom
