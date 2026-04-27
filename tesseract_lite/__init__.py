@@ -1,6 +1,6 @@
 bl_info = {
     "name": "tesseract_lite",
-    "author": "blackwa11 / Blackwall",
+    "author": "Blackwall",
     "version": (1, 0, 0),
     "blender": (3, 0, 0),
     "location": "View3D > Sidebar > 4D Transform",
