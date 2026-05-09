@@ -1,18 +1,24 @@
 # Tesseract Lite
 
-Lightweight Blender add-on for real-time 4D tesseract projection and rotation.
+Real-time 4D tesseract projection system for Blender.
 
 ---
 
-## 🚀 Download
+# 🔥 Preview
 
-### ✅ Recommended (Blender install)
+![Tesseract Preview](https://github.com/blackwalllab/tesseract_lite/raw/main/preview.gif)
 
-👉 Download the addon ZIP from **Releases**:
+---
 
-https://github.com/blackwa11/tesseract_lite/releases
+# 🚀 Download
 
-Use the file:
+## ✅ Recommended Installation
+
+Download the Blender addon ZIP from Releases:
+
+https://github.com/blackwalllab/tesseract_lite/releases
+
+Install file:
 
 ```text
 tesseract_lite.zip
@@ -20,7 +26,7 @@ tesseract_lite.zip
 
 ---
 
-### ⚠ Important
+# ⚠ Important
 
 Do NOT use:
 
@@ -28,92 +34,96 @@ Do NOT use:
 Code → Download ZIP
 ```
 
-This downloads the repository source code, not the installable addon.
+This downloads the repository source code, NOT the installable Blender addon.
 
 ---
 
-### 🟢 Legacy (single file)
-
-Direct download:
-
-https://github.com/blackwa11/tesseract_lite/raw/main/tesseract_lite.py
-
----
-
-## ⚙ Installation
-
-### Method 1 — ZIP (recommended)
+# ⚙ Blender Installation
 
 1. Open Blender
+
 2. Go to:
-   Edit → Preferences → Add-ons → Install
-3. Select:
-   tesseract_lite.zip
-4. Enable the addon
-
----
-
-### Method 2 — Single file (.py)
-
-1. Open Blender
-2. Go to:
-   Edit → Preferences → Add-ons → Install
-3. Select:
-   tesseract_lite.py
-4. Enable the addon
-
----
-
-## 🔥 Features
-
-* Real-time 4D tesseract projection
-* 4D rotations (XY, XZ, XW, YZ, YW, ZW)
-* Mesh and Curve modes
-* Adjustable speed, scale and depth
-* Lightweight (pure Python, no dependencies)
-
----
-
-## 🧠 How it works
-
-The addon generates a 4D hypercube (tesseract), applies rotations in 4D space, and projects it into 3D in real time.
-
----
-
-## 📂 Project structure
 
 ```text
-tesseract_lite/      ← modular addon (main version)
-tesseract_lite.py    ← legacy single-file version
+Edit → Preferences → Add-ons → Install
+```
+
+3. Select:
+
+```text
+tesseract_lite.zip
+```
+
+4. Enable the addon
+
+---
+
+# 🔥 Features
+
+- Real-time 4D tesseract projection
+- Full 4D rotation system
+- XY / XZ / XW / YZ / YW / ZW rotation planes
+- Mesh mode
+- Curve mode
+- Adjustable scale
+- Adjustable depth
+- Adjustable animation speed
+- Lightweight Python implementation
+- Procedural real-time generation
+- No external dependencies
+
+---
+
+# 🧠 About
+
+Tesseract Lite is an experimental Blender system for visualizing and manipulating a 4D hypercube in real time.
+
+The addon generates a mathematical tesseract structure, applies transformations in 4D space, and projects the result into 3D space dynamically.
+
+This is NOT a pre-rendered animation.
+
+The geometry is generated procedurally in real time directly inside Blender.
+
+---
+
+# 📦 Included
+
+```text
+tesseract_lite.zip
+README.md
+LICENSE
+preview.gif
 ```
 
 ---
 
-## 🛠 Requirements
+# 🛠 Requirements
 
-* Blender 3.0+
-
----
-
-## 📦 Notes
-
-* Use **Releases ZIP** for Blender installation
-* Use `.py` only if you prefer the legacy method
-* Repository ZIP is NOT for installation
+- Blender 3.0 or newer
 
 ---
 
-## 🚀 Roadmap
+# 🚀 Roadmap
 
-* Improved UI
-* More 4D structures
-* Animation tools
-* Pro version
+- Additional 4D structures
+- Hypercube variations
+- Hyper sphere systems
+- Hyper torus systems
+- Improved UI
+- Animation tools
+- Multi-object systems
+- Advanced projection controls
+- Pro version
 
 ---
 
-## 👤 Author
+# 👤 Author
 
 Blackwall
 
+GitHub:
+https://github.com/blackwalllab/tesseract_lite
+
 ---
+
+# 🌀 Beyond 3D
